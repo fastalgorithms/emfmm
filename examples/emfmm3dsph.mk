@@ -4,7 +4,7 @@
 #HOST=osx-gfortran
 #HOST=osx-gfortran-openmp
 
-NAME = fmps
+NAME = emfmmsph
 
 ifeq ($(HOST),osx-gfortran)
   PROJECT = $(NAME)_osx
@@ -96,7 +96,7 @@ endif
 # SOURCE FILE LIST
 #
 SRCDIR = ../src
-UDIR = ../contrib/utilities
+UDIR = ../contrib/utilities/src
 
 f90srcs =
 
@@ -115,10 +115,10 @@ fsrcs = emfmm3dsph_dr.f \
   $(SRCDIR)/projections.f \
   $(SRCDIR)/rotviarecur3.f \
   $(SRCDIR)/rotproj.f \
+  $(SRCDIR)/xrecursion.f \
   $(UDIR)/prinm.f \
   $(UDIR)/yrecursion.f \
   $(UDIR)/legeexps.f \
-  $(UDIR)/xrecursion.f \
   $(UDIR)/prini.f \
   $(UDIR)/dfft.f \
   $(UDIR)/hkrand.f \
