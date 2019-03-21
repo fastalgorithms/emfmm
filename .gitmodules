@@ -1,0 +1,3 @@
+[submodule "contrib/utilities"]
+	path = contrib/utilities
+	url = git@gitlab.com:fastalgorithms/utilities.git
