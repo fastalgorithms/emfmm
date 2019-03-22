@@ -6,14 +6,13 @@
 
 NAME = emfmmsph
 
-ifeq ($(HOST),osx-gfortran)
+ifeq ($(HOST),osx-gcc)
   PROJECT = $(NAME)_osx
   OBJSUF = o
   MODSUF = mod
   FC = gfortran-8
-  FFLAGS = -O2
+  FFLAGS = -O2 -w
   LDFLAGS = 
-  #FLINK=gfortran -o $(PROJECT) -static
   FLINK = gfortran-8 -o $(PROJECT)
 endif
 
